@@ -37,6 +37,6 @@
    :maxdepth: 1
    :caption: Links:
 
-   GitHub <https://github.com/grafana/xk6-python>
-   Releases <https://github.com/grafana/xk6-python/releases>
+   GitHub <https://github.com/msradam/xk6-python>
+   Releases <https://github.com/msradam/xk6-python/releases>
 

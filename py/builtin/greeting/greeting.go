@@ -2,7 +2,7 @@
 package greeting
 
 import (
-	"github.com/grafana/xk6-python/py/builtin/helpers"
+	"github.com/msradam/xk6-python/py/builtin/helpers"
 	"github.com/sirupsen/logrus"
 	"go.k6.io/k6/js/modules"
 	"go.starlark.net/starlark"

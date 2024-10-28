@@ -21,7 +21,7 @@ jobs:
         id: build
         uses: szkiba/xk6bundler@v0
         with:
-          with: github.com/grafana/xk6-python=/github/workspace
+          with: github.com/msradam/xk6-python=/github/workspace
           k6_version: v0.52.0
 
       - name: Create Release

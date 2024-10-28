@@ -77,7 +77,7 @@ The xk6-python development is in the PoC phase, but it can be used to write real
 
 ## Download
 
-You can download pre-built k6 binaries from [Releases](https://github.com/grafana/xk6-python/releases/) page.
+You can download pre-built k6 binaries from [Releases](https://github.com/msradam/xk6-python/releases/) page.
 
 ## Status
 

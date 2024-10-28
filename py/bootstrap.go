@@ -5,13 +5,13 @@ import (
 
 	"go.k6.io/k6/js/modules"
 
-	"github.com/grafana/xk6-python/py/builtin/check"
-	"github.com/grafana/xk6-python/py/builtin/greeting"
-	"github.com/grafana/xk6-python/py/builtin/group"
-	"github.com/grafana/xk6-python/py/builtin/json"
-	"github.com/grafana/xk6-python/py/builtin/metrics"
-	"github.com/grafana/xk6-python/py/builtin/requests"
-	"github.com/grafana/xk6-python/py/builtin/time"
+	"github.com/msradam/xk6-python/py/builtin/check"
+	"github.com/msradam/xk6-python/py/builtin/greeting"
+	"github.com/msradam/xk6-python/py/builtin/group"
+	"github.com/msradam/xk6-python/py/builtin/json"
+	"github.com/msradam/xk6-python/py/builtin/metrics"
+	"github.com/msradam/xk6-python/py/builtin/requests"
+	"github.com/msradam/xk6-python/py/builtin/time"
 )
 
 //go:embed embedded

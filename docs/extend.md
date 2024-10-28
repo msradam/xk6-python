@@ -35,8 +35,8 @@ func RegisterBuiltin(loader BuiltinLoaderFunc, module string)
 
 There are two options for placing the source code of the module:
 
-1. By modifying the source of xk6-pyhon. The module should be placed in a subdirectory of the [py/builtin](https://github.com/grafana/xk6-python/tree/main/py/builtin) directory and registered in the `Bootstrap()` function.
+1. By modifying the source of xk6-pyhon. The module should be placed in a subdirectory of the [py/builtin](https://github.com/msradam/xk6-python/tree/main/py/builtin) directory and registered in the `Bootstrap()` function.
 
 2. By creating a k6 extension. This k6 extension should be integrated into k6 and the module registration should be done in the `init()` function.
 
-For example, it is worth looking at the [built-in modules of xk6-python](https://github.com/grafana/xk6-python/tree/main/py/builtin).
+For example, it is worth looking at the [built-in modules of xk6-python](https://github.com/msradam/xk6-python/tree/main/py/builtin).

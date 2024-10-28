@@ -8,9 +8,9 @@ Before you begin, make sure to familiarize yourself with the [Code of Conduct](C
 
 Don't be afraid to file issues! Nobody can fix a bug we don't know exists, or add a feature we didn't think of.
 
-1. **Ensure the bug was not already reported** by searching on GitHub under [Issues](https://github.com/grafana/xk6-python/issues).
+1. **Ensure the bug was not already reported** by searching on GitHub under [Issues](https://github.com/msradam/xk6-python/issues).
 
-2. If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/grafana/xk6-python/issues/new). Be sure to include a **title and clear description**, as much relevant information as possible.
+2. If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/msradam/xk6-python/issues/new). Be sure to include a **title and clear description**, as much relevant information as possible.
 
 
 The worst that can happen is that someone closes it and points you in the right direction.
@@ -47,23 +47,23 @@ Regardless of the way of implementation, the modules are used in the same way. T
 
 ### Builtin module
 
-The builtin module must be written in the go programming language. Each module is placed in a separate go package within the [py/builtin](https://github.com/grafana/xk6-python/tree/main/py/builtin) directory. The package must have a public loader function to load the module's global starlark symbols.
+The builtin module must be written in the go programming language. Each module is placed in a separate go package within the [py/builtin](https://github.com/msradam/xk6-python/tree/main/py/builtin) directory. The package must have a public loader function to load the module's global starlark symbols.
 
 ```go
 type BuiltinLoaderFunc func(moduleName string, thread *starlark.Thread, vu modules.VU) (starlark.StringDict, error)
 ```
 
-The builtin module must be registered in the `Bootstrap()` function (in the [py/bootstrap.go](https://github.com/grafana/xk6-python/tree/main/py/bootstrap.go) file) using a `registerBuiltin()` function call.
+The builtin module must be registered in the `Bootstrap()` function (in the [py/bootstrap.go](https://github.com/msradam/xk6-python/tree/main/py/bootstrap.go) file) using a `registerBuiltin()` function call.
 
 ### Embedded module
 
-The embedded modules are to be implemented in starlark (Python). Each module is placed in a separate file within the [py/embedded](https://github.com/grafana/xk6-python/tree/main/py/embedded) directory. The file extension can be .py or .star, the advantage of .star is that using the [bazel-stack-vscode](https://marketplace.visualstudio.com/items?itemName=StackBuild.bazel-stack-vscode) Visual Studio Code extension, quite good editor support is available for the starlark language.
+The embedded modules are to be implemented in starlark (Python). Each module is placed in a separate file within the [py/embedded](https://github.com/msradam/xk6-python/tree/main/py/embedded) directory. The file extension can be .py or .star, the advantage of .star is that using the [bazel-stack-vscode](https://marketplace.visualstudio.com/items?itemName=StackBuild.bazel-stack-vscode) Visual Studio Code extension, quite good editor support is available for the starlark language.
 
 Embedded modules are loaded without using a file extension. This way, the embedded module can later be rewritten as a builtin module.
 
-No registration is required for modules placed in the [py/embedded](https://github.com/grafana/xk6-python/tree/main/py/embedded) directory. This folder will be embedded in the go code of the k6 extension and the modules here will be automatically available in the test script.
+No registration is required for modules placed in the [py/embedded](https://github.com/msradam/xk6-python/tree/main/py/embedded) directory. This folder will be embedded in the go code of the k6 extension and the modules here will be automatically available in the test script.
 
-If justified, additional embedded filesystems can be added to the search path of embeddedd modules. Additional embedded filesystems can be registered in the `Bootstrap()` function (in the [py/bootstrap.go](https://github.com/grafana/xk6-python/tree/main/py/bootstrap.go) file) using a `registerFilesystem()` or `registerSubFilesystem` function call.
+If justified, additional embedded filesystems can be added to the search path of embeddedd modules. Additional embedded filesystems can be registered in the `Bootstrap()` function (in the [py/bootstrap.go](https://github.com/msradam/xk6-python/tree/main/py/bootstrap.go) file) using a `registerFilesystem()` or `registerSubFilesystem` function call.
 
 ### Remote module
 
@@ -118,7 +118,7 @@ go tool cover -html=coverage.txt
 Extensions can be integrated into the k6 executable using the xk6 CLI tool.
 
 ```bash
-xk6 build --with github.com/grafana/xk6-python=.
+xk6 build --with github.com/msradam/xk6-python=.
 ```
 
 [build]: <#build---build-k6-binary>

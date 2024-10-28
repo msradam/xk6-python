@@ -9,7 +9,7 @@ import (
 	"go.k6.io/k6/metrics"
 	"go.starlark.net/starlark"
 
-	"github.com/grafana/xk6-python/py/builtin/helpers"
+	"github.com/msradam/xk6-python/py/builtin/helpers"
 )
 
 type module struct {

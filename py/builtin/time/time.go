@@ -4,7 +4,7 @@ package time
 import (
 	"time"
 
-	"github.com/grafana/xk6-python/py/builtin/helpers"
+	"github.com/msradam/xk6-python/py/builtin/helpers"
 	"go.k6.io/k6/js/modules"
 	"go.starlark.net/starlark"
 )
