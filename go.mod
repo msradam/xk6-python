@@ -1,4 +1,4 @@
-module github.com/grafana/xk6-python
+module github.com/msradam/xk6-python
 
 go 1.21
 
